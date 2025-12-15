@@ -15,6 +15,9 @@ const config = {
   watchFolders: [
     path.resolve(__dirname, 'node_modules'),
   ],
+  server: {
+    port: 8082,
+  },
 };
 
 async function getConfig() {
@@ -22,7 +25,7 @@ async function getConfig() {
     name: 'megaStoreCart',
     filename: 'megaStoreCart.bundle',
     exposes: {
-      './example': './src/example.tsx',
+      './cart': './src/index.tsx',
     },
     shared: {
       react: {
